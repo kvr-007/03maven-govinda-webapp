@@ -7,10 +7,10 @@ metadata:
         app: myapp1
 spec:
     containers:
-    name: myfirstpodwithsvc1
-    image: kv007/02govindait02
-    ports:
-    - containerPort: 8080
+      - name: myfirstpodwithsvc1
+        image: kv007/govindait03
+        ports:
+          - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -22,6 +22,6 @@ spec:
         app: myapp1
     ports:
     - port: 80
-    targetPort: 8080
-    nodePort: 30850
+      targetPort: 8080
+      nodePort: 30750
 ...
